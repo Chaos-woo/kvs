@@ -1,0 +1,132 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "kvs",
+    "version": "0.6.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "window": {
+        "all": false,
+        "close": true
+      },
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": ["http://localhost:5000/*", "http://127.0.0.1:5000/*"]
+      },
+      "dialog": {
+        "all": true
+      },
+      "fs": {
+        "all": false,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "createDir": true,
+        "removeFile": true,
+        "removeDir": true,
+        "copyFile": true,
+        "exists": true,
+        "scope": [
+          "$APPDATA/*",
+          "$APPDATA/logs/*",
+          "$APPDATA/kvs/*",
+          "$APPDATA/kvs/logs/*",
+          "$APPDATA/com.kvs.dev/*",
+          "$APPDATA/com.kvs.dev/kvs/*",
+          "$APPDATA/com.kvs.dev/kvs/logs/*",
+          "$LOCALDATA/*",
+          "$LOCALDATA/logs/*",
+          "$LOCALDATA/kvs/*",
+          "$LOCALDATA/kvs/logs/*",
+          "$LOCALDATA/com.kvs.dev/*",
+          "$LOCALDATA/com.kvs.dev/kvs/*",
+          "$LOCALDATA/com.kvs.dev/kvs/logs/*",
+          "$HOME/.kvs/*",
+          "$HOME/.kvs/logs/*",
+          "$TEMP/kvs/*",
+          "$TEMP/kvs/logs/*",
+          "backend/logs/*",
+          "../backend/logs/*",
+          "../../backend/logs/*",
+          "../../../backend/logs/*",
+          "$DESKTOP/*",
+          "$DOCUMENT/*",
+          "$DOWNLOAD/*",
+          "$HOME/*"
+        ]
+      },
+      "path": {
+        "all": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "com.kvs.dev",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [
+        "../../backend/dist/kvs_backend.exe"
+      ],
+      "externalBin": [
+        "binaries/kvs_backend"
+      ],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "KVs",
+        "width": 650,
+        "height": 800,
+        "maxHeight": 1000,
+        "maxWidth": 1000,
+        "minHeight": 800,
+        "minWidth": 650
+      }
+    ]
+  }
+}
