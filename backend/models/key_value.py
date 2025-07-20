@@ -1,18 +1,11 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Text, event
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from sqlalchemy.ext.declarative import declarative_base
 import sys
 from pathlib import Path
-import importlib.util
 
-# Import Base and engine from models/__init__.py
-models_path = Path(__file__).resolve().parent / "__init__.py"
-spec = importlib.util.spec_from_file_location("models", models_path)
-models = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(models)
-Base = models.Base
-engine = models.engine
+# Import Base and engine from models/__init__.py using standard import
+from . import Base, engine
 
 # Key table
 class Key(Base):

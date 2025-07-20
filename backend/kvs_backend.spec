@@ -10,7 +10,7 @@ a = Analysis(
         ('routes/__init__.py', 'routes'),
         ('utils/__init__.py', 'utils'),
     ],
-    hiddenimports=['routes.api', 'routes.kv', 'models', 'utils.logger'],
+    hiddenimports=['routes.api', 'routes.kv', 'models', 'models.key_value', 'utils.logger'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

@@ -15,7 +15,7 @@ if str(current_dir) not in sys.path:
 from routes.api import api_bp
 from routes.kv import kv_bp
 from models import Base, engine
-from models.key_value import create_fts5_table
+from models.key_value import create_fts5_table, Key, Val, KVRelation
 from utils.logger import api_logger, error_logger
 
 app = Flask(__name__)

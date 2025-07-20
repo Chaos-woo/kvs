@@ -1,6 +1,6 @@
 # KVs - 高级键值存储桌面应用程序
 
-[![版本](https://img.shields.io/badge/version-0.6.0-blue.svg)](https://github.com/Chaos-woo/kvs)
+[![版本](https://img.shields.io/badge/version-0.6.1-blue.svg)](https://github.com/Chaos-woo/kvs)
 [![许可证](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![平台](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 

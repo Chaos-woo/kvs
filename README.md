@@ -1,6 +1,6 @@
 # KVs - Advanced Key-Value Store Desktop Application
 
-[![Version](https://img.shields.io/badge/version-0.6.0-blue.svg)](https://github.com/Chaos-woo/kvs)
+[![Version](https://img.shields.io/badge/version-0.6.1-blue.svg)](https://github.com/Chaos-woo/kvs)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 
